@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "build": "tsc && npm run runLog",
+    "build:w": "tsc -w",
     "start:dist": "nodemon build/server.js",
-    "dev": "nodemon build/server.js",
+    "dev": "nodemon src/server.ts",
     "start": "npm run runLog && node src/server.ts",
     "runLog": "bash log.sh"
   },
