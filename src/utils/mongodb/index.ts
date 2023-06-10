@@ -5,6 +5,8 @@ import { app } from "../../app";
 
 dotenv.config();
 
+const MONGO_PORT = process.env.MONGO_PORT || 7000;
+
 export const generateMongoUri = () => {
   const MONGO_USERNAME = process.env.MONGO_USERNAME || "local_username";
   const MONGO_PASSWORD = process.env.MONGO_PASSWORD || "local_password";
@@ -28,9 +30,9 @@ export const initMongo = () => {
 
   db.on("error", (err) => logger.error("MONGO ERROR", err));
   db.once("open", () => {
-    app.listen(5000, () => {
+    app.listen(MONGO_PORT, () => {
       logger.info("Connected successfully to MongoDB");
-      logger.info(`Server is running on port ${5000}`);
+      logger.info(`Server is running on port ${MONGO_PORT}`);
     });
   });
 };
