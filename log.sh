@@ -2,7 +2,7 @@ echo "START LOG FILES"
 pwd
 uname -a
 ls -la
-cd ./src
+cd ./build
 echo "INSIDE SRC"
 pwd
 uname -a
