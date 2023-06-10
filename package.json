@@ -7,7 +7,7 @@
     "build:w": "tsc -w",
     "start:dist": "nodemon build/server.js",
     "dev": "nodemon src/server.ts",
-    "start": "npm run runLog && node build/server.js",
+    "start": "npm run runLog && node src/server.ts",
     "runLog": "bash log.sh"
   },
   "author": "",
