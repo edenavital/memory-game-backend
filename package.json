@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npm run runLog && tsc",
+    "build": "tsc && npm run runLog",
     "postbuild": "cp -R node_modules build/node_modules",
     "build:w": "tsc -w",
     "start:dist": "nodemon build/server.js",
