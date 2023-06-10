@@ -32,7 +32,7 @@ export const initMongo = () => {
   db.once("open", () => {
     app.listen(MONGO_PORT, () => {
       logger.info("Connected successfully to MongoDB");
-      logger.info(`Server is running on port ${MONGO_PORT}`);
+      logger.info(`MONGO is running on port ${MONGO_PORT}`);
     });
   });
 };
